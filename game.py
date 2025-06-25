@@ -1,4 +1,7 @@
 from pygame import *
+# Игровой таймер
+clock = time.Clock()
+FPS = 100
 # Настройки окна
 WINDOW_X = 0
 WINDOW_Y = 0
@@ -8,7 +11,7 @@ WINDOW_BACKGROUND = 'background.jpg'
 # Настройки игрока
 PLAYER_X = 0
 PLAYER_Y = 0
-PLAYER_SPEED = 1
+PLAYER_SPEED = 3
 PLAYER_WIDTH = 100
 PLAYER_HEIGHT = 100
 PLAYER_IMAGE = 'player.png'
@@ -39,5 +42,7 @@ while True:
         PLAYER_Y += PLAYER_SPEED
     # Обновляем экран
     display.update()
+    # Частота кадров
+    clock.tick(FPS)
 
 
